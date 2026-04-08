@@ -38,6 +38,9 @@ object Key {
 
     const val MIXED_PORT = "mixedPort"
     const val ALLOW_ACCESS = "allowAccess"
+    const val INBOUND_AUTH = "inboundAuth"
+    const val INBOUND_AUTH_USERNAME = "inboundAuthUsername"
+    const val INBOUND_AUTH_PASSWORD = "inboundAuthPassword"
     const val SPEED_INTERVAL = "speedInterval"
     const val SHOW_DIRECT_SPEED = "showDirectSpeed"
 

@@ -223,6 +223,10 @@
 <string name="ignore_battery_optimizations">Игнорировать оптимизации батареи</string>
 <string name="ignore_battery_optimizations_sum">Снять некоторые ограничения</string>
 <string name="inbound_settings">Входящие настройки</string>
+<string name="inbound_auth">Авторизация на локальном прокси</string>
+<string name="inbound_auth_summary">Требовать SOCKS5/HTTP авторизацию на локальном прокси для защиты от несанкционированного доступа других приложений</string>
+<string name="inbound_auth_username">Имя пользователя для авторизации</string>
+<string name="inbound_auth_password">Пароль для авторизации</string>
 <string name="insecure">Ненадежный</string>
 <string name="install_from_fdroid">Установить с F-Droid</string>
 <string name="install_from_play_store">Установить из Play Store</string>

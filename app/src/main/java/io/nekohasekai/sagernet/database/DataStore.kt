@@ -108,6 +108,9 @@ object DataStore : OnPreferenceDataStoreChangeListener {
     var bypassLanInCore by configurationStore.boolean(Key.BYPASS_LAN_IN_CORE)
 
     var allowAccess by configurationStore.boolean(Key.ALLOW_ACCESS)
+    var inboundAuth by configurationStore.boolean(Key.INBOUND_AUTH) { true }
+    var inboundAuthUsername by configurationStore.string(Key.INBOUND_AUTH_USERNAME) { "" }
+    var inboundAuthPassword by configurationStore.string(Key.INBOUND_AUTH_PASSWORD) { "" }
     var speedInterval by configurationStore.stringToInt(Key.SPEED_INTERVAL)
     var showGroupInNotification by configurationStore.boolean("showGroupInNotification")
 

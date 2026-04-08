@@ -204,6 +204,22 @@
             app:key="allowAccess"
             app:summary="@string/allow_access_sum"
             app:title="@string/allow_access" />
+        <SwitchPreference
+            app:defaultValue="true"
+            app:icon="@drawable/ic_action_lock"
+            app:key="inboundAuth"
+            app:summary="@string/inbound_auth_summary"
+            app:title="@string/inbound_auth" />
+        <EditTextPreference
+            app:key="inboundAuthUsername"
+            app:dependency="inboundAuth"
+            app:title="@string/inbound_auth_username"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="inboundAuthPassword"
+            app:dependency="inboundAuth"
+            app:title="@string/inbound_auth_password"
+            app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/cag_misc">

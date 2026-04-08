@@ -58,6 +58,10 @@
     <string name="cag_route">Route Settings</string>
     <string name="allow_access">Allow Connections from the LAN</string>
     <string name="allow_access_sum">Bind inbound servers to 0.0.0.0</string>
+    <string name="inbound_auth">Inbound Authentication</string>
+    <string name="inbound_auth_summary">Require SOCKS5/HTTP authentication on the local proxy to prevent unauthorized access from other apps</string>
+    <string name="inbound_auth_username">Auth Username</string>
+    <string name="inbound_auth_password">Auth Password</string>
     <string name="inbound_settings">Inbound Settings</string>
     <string name="general_settings">App Settings</string>
     <string name="require_http">Enable HTTP inbound</string>

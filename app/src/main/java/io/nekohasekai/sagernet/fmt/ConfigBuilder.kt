@@ -38,6 +38,7 @@ import moe.matsuri.nb4a.utils.JavaUtil.gson
 import moe.matsuri.nb4a.utils.Util
 import moe.matsuri.nb4a.utils.listByLineOrComma
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
+import java.util.UUID
 
 const val TAG_MIXED = "mixed-in"
 
@@ -160,6 +161,14 @@ fun buildConfig(
             clash_api = ClashAPIOptions().apply {
                 external_controller = "127.0.0.1:9090"
                 external_ui = "../files/yacd"
+                // Protect Clash API with a secret to prevent unauthorized access
+                if (DataStore.inboundAuth) {
+                    secret = DataStore.inboundAuthPassword.ifBlank {
+                        UUID.randomUUID().toString().also {
+                            DataStore.inboundAuthPassword = it
+                        }
+                    }
+                }
             }
         }
 
@@ -232,6 +241,20 @@ fun buildConfig(
                 domain_strategy = genDomainStrategy(DataStore.resolveDestination)
                 sniff = needSniff
                 sniff_override_destination = needSniffOverride
+                // Enable SOCKS5/HTTP authentication on the local proxy to prevent
+                // unauthorized access from other apps on the device (CVE mitigation)
+                if (DataStore.inboundAuth) {
+                    val authUsername = DataStore.inboundAuthUsername.ifBlank { "nekobox" }
+                    val authPassword = DataStore.inboundAuthPassword.ifBlank {
+                        UUID.randomUUID().toString().also {
+                            DataStore.inboundAuthPassword = it
+                        }
+                    }
+                    users = listOf(User().apply {
+                        username = authUsername
+                        password = authPassword
+                    })
+                }
             })
         }
 

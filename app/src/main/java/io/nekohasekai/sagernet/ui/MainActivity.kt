@@ -117,13 +117,7 @@ class MainActivity : ThemedActivity(),
             }
         }
 
-        if (isPreview) {
-            MaterialAlertDialogBuilder(this)
-                .setTitle(BuildConfig.PRE_VERSION_NAME)
-                .setMessage(R.string.preview_version_hint)
-                .setPositiveButton(android.R.string.ok, null)
-                .show()
-        }
+
     }
 
     fun refreshNavMenu(clashApi: Boolean) {
@@ -336,6 +330,10 @@ class MainActivity : ThemedActivity(),
 
             R.id.nav_group -> displayFragment(GroupFragment())
             R.id.nav_route -> displayFragment(RouteFragment())
+            R.id.nav_proxied_apps -> {
+                startActivity(Intent(this, AppManagerActivity::class.java))
+                return false
+            }
             R.id.nav_settings -> displayFragment(SettingsFragment())
             R.id.nav_traffic -> displayFragment(WebviewFragment())
             R.id.nav_tools -> displayFragment(ToolsFragment())

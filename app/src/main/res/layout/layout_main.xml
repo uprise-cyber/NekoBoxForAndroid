@@ -42,6 +42,7 @@
             app:backgroundTint="?fabColorBackground"
             app:fabCustomSize="168dp"
             app:layout_anchor="@id/stats"
+            app:layout_anchorGravity="top|center_horizontal"
             app:maxImageSize="72dp"
             app:pressedTranslationZ="6dp"
             app:srcCompat="@drawable/ic_service_idle" />
@@ -51,6 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginBottom="180dp"
             android:nextFocusUp="@+id/fab"
             app:backgroundTint="?colorMaterial300"
             app:contentInsetStart="0dp"

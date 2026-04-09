@@ -176,8 +176,8 @@
         productive. If the server does not support it, you will not be able to access the Internet.</string>
     <string name="mux_concurrency">Mux Concurrent Connections</string>
     <string name="tcp_keep_alive_interval">TCP keep active packet delivery interval</string>
-    <string name="proxied_apps">Apps VPN mode</string>
-    <string name="proxied_apps_summary">Configure VPN mode for selected apps</string>
+    <string name="proxied_apps">Apps</string>
+    <string name="proxied_apps_summary">List of apps to proxy</string>
     <string name="on">On</string>
     <string name="off">Off</string>
     <string name="search_apps">Search…</string>
